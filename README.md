@@ -1,5 +1,6 @@
 # sql-kata-workshop
 
+```sql
 ## The following queries should be refactored to improve efficiency
 
 1. SELECT user_id, username FROM Users WHERE user_id IN (SELECT user_id FROM Orders WHERE order_date > '2023-01-01'));
@@ -18,7 +19,7 @@
 5. add index - CREATE INDEX idx_order_items_order_id ON OrderItems (order_id);
 6. ELECT u.* FROM Users u LEFT JOIN Orders o ON u.user_id = o.user_id WHERE o.order_id IS NULL
 7. SELECT user_id, order_date, total_price, AVG(total_price) OVER (PARTITION BY user_id) AS avg_order_total FROM Orders ORDER BY order_date
-   
+```
 
 
  
